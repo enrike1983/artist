@@ -4,9 +4,8 @@
 
 body {
   padding-bottom: 40px;
-  color: #969794;
-  background: #EDEDE7;
-  text-transform: uppercase;
+  color: #393a3d;
+  background: #FAFAFA;
   font-style: normal;
   text-align: center;
   font-family: "Atlas Grotesk Web", Helvetica, sans-serif;
@@ -14,8 +13,18 @@ body {
 
 .fadeable {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity .5s, transform .5s;
+  transform: translateY(40px);
+  transition: opacity 1s, transform 1s;
+  &.in-view {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fadeable-later {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 2s, transform 2s;
   &.in-view {
     transform: translateY(0);
     opacity: 1;
@@ -46,23 +55,24 @@ body {
   padding-right: 0;
   padding-left: 0;
   font-size: 13px;
-  color: #6DA1C0; /* IE8 proofing */
+  color: #777; /* IE8 proofing */
   border-bottom: 2px solid transparent;
 }
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
   background-color: transparent;
-  border-bottom-color: #6DA1C0;
+  border-bottom-color: #393a3d;
 }
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
 .masthead-nav > .active > a:focus {
-  color: #2E5781;
-  border-bottom-color: #2E5781;
+  color: #393a3d;
+  border-bottom-color: #393a3d;
 }
 
 @media (min-width: 768px) {
   .masthead-brand {
+    font-family: "Canela Web", Helvetica, sans-serif;
     float: left;
   }
   .masthead-nav {
@@ -71,30 +81,16 @@ body {
 }
 
 
-
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  margin-bottom: 20px;
-  text-align: center;
-}
-.marketing h2 {
-  font-weight: normal;
-}
-.marketing .col-lg-4 p {
-  margin-right: 10px;
-  margin-left: 10px;
-}
-
-
 /* Featurettes
 ------------------------- */
 .featurette {
   .lead {
     font-size:13px;
+    font-weight: normal;
+    line-height:2;
+    font-family: "Atlas Grotesk Web", Helvetica, sans-serif;
   }
+  margin-bottom:80px;
 }
 
 .featurette-divider {
@@ -102,9 +98,11 @@ body {
 }
 /* Thin out the marketing headings */
 .featurette-heading {
+  font-family: "Canela Web", Helvetica, sans-serif;
   font-weight: 100;
-  line-height: 1;
+  line-height: 1.5;
   letter-spacing: -1px;
+  margin-bottom:40px;
 }
 
 
@@ -126,6 +124,12 @@ body {
   }
   .featurette-heading {
     font-size: 37px;
+    letter-spacing: 8px;
+  }
+  .payoff {
+    margin-top:200px;
+    width: 700px;
+    text-align: center;
   }
 }
 
