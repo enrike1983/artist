@@ -19,3 +19,15 @@
   font-style:   normal;
   font-stretch: normal;
 }
+@font-face {
+  font-family: 'Larsseit-Light';
+  src: url("../../fonts/32162C_0_0.eot");
+  src: url("../../fonts/32162C_0_0.eot?#iefix") format("embedded-opentype"),
+  url("../../fonts/32162C_0_0.woff2") format("woff2"),
+  url("../../fonts/32162C_0_0.woff") format("woff"),
+  url("../../fonts/32162C_0_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Neo Medium';
+  src: url("../../fonts/neo-medium.eot");
+  src: url("../../fonts/neo-medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/neo-medium.woff") format("woff"); }
