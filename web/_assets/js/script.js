@@ -7,3 +7,7 @@ inView('.fadeable').on('enter', function(el) {
 inView('.fadeable-later').on('enter', function(el) {
     el.classList.add('in-view');
 });
+
+inView('.fadeable-right').on('enter', function(el) {
+    el.classList.add('in-view');
+});

@@ -14,7 +14,7 @@ body {
 .fadeable {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 1s, transform 1s;
+  transition: opacity .5s, transform .5s;
   &.in-view {
     transform: translateY(0);
     opacity: 1;
@@ -25,6 +25,16 @@ body {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 2s, transform 2s;
+  &.in-view {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fadeable-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 1.5s, transform 1.5s;
   &.in-view {
     transform: translateY(0);
     opacity: 1;
@@ -85,10 +95,10 @@ body {
 ------------------------- */
 .featurette {
   .lead {
-    font-size:13px;
+    font-size:15px;
     font-weight: normal;
     line-height:2;
-    font-family: "Atlas Grotesk Web", Helvetica, sans-serif;
+    font-family: "Larsseit-Light", Helvetica, sans-serif;
   }
   margin-bottom:80px;
 }
@@ -98,11 +108,29 @@ body {
 }
 /* Thin out the marketing headings */
 .featurette-heading {
-  font-family: "Canela Web", Helvetica, sans-serif;
+  font-family: "Neo Medium", Helvetica, sans-serif;
   font-weight: 100;
   line-height: 1.5;
   letter-spacing: -1px;
   margin-bottom:40px;
+}
+
+.cm-row {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.cm-7 {
+  width: 70%;
+}
+.cm-3 {
+  width:30%;
+}
+.cm-5 {
+  width:50%;
+}
+.cm-row-content {
+  padding:5%;
 }
 
 
@@ -131,10 +159,7 @@ body {
     width: 700px;
     text-align: center;
   }
-}
-
-@media (min-width: 992px) {
-  .featurette-heading {
-    margin-top: 120px;
+  .cm-row {
+    margin-bottom:200px;
   }
 }
