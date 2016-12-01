@@ -53,6 +53,7 @@ body {
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
+  font-family: "Canela Web", Helvetica, sans-serif;
 }
 
 .masthead-nav > li {
@@ -82,7 +83,6 @@ body {
 
 @media (min-width: 768px) {
   .masthead-brand {
-    font-family: "Canela Web", Helvetica, sans-serif;
     float: left;
   }
   .masthead-nav {
@@ -94,13 +94,11 @@ body {
 /* Featurettes
 ------------------------- */
 .featurette {
+  margin-top:60px;
   .lead {
-    font-size:15px;
-    font-weight: normal;
-    line-height:2;
-    font-family: "Larsseit-Light", Helvetica, sans-serif;
+    font-family: "euclid_flex", Helvetica, sans-serif;
+    text-align: left;
   }
-  margin-bottom:80px;
 }
 
 .featurette-divider {
@@ -108,11 +106,8 @@ body {
 }
 /* Thin out the marketing headings */
 .featurette-heading {
-  font-family: "Neo Medium", Helvetica, sans-serif;
-  font-weight: 100;
-  line-height: 1.5;
-  letter-spacing: -1px;
-  margin-bottom:40px;
+  font-family: "euclid_flex", Helvetica, sans-serif;
+  text-align: left;
 }
 
 .cm-row {
@@ -130,12 +125,33 @@ body {
   width:50%;
 }
 .cm-row-content {
-  padding:5%;
+  padding:10%;
 }
 
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
+
+@media (min-width: 320px) {
+  .featurette-heading {
+    text-transform: uppercase;
+    line-height: 1.8;
+    letter-spacing: .7rem;
+    word-spacing: .2rem;
+    font-size: 2.1rem;
+    position: relative;
+    padding-right: 3rem;
+  }
+  .featurette {
+    .lead {
+      padding-top: .7rem;
+      font-size: 1.4rem;
+      line-height: 2;
+      letter-spacing: .3rem;
+      max-width: 93%;
+    }
+  }
+}
 
 @media (min-width: 768px) {
   /* Navbar positioning foo */
@@ -151,13 +167,17 @@ body {
     padding-left: 0;
   }
   .featurette-heading {
-    font-size: 37px;
     letter-spacing: 8px;
+    font-size: 3.5rem;
   }
-  .payoff {
-    margin-top:200px;
-    width: 700px;
-    text-align: center;
+  .featurette {
+    .lead {
+      line-height: 2.9;
+      font-size: 1.3rem;
+      letter-spacing: .6rem;
+      font-weight: 300;
+      text-align: left;
+    }
   }
   .cm-row {
     margin-bottom:200px;
