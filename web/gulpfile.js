@@ -39,7 +39,16 @@ gulp.task('fonts', function() {
         .pipe(gulp.dest('fonts'));
 });
 
-gulp.task('watch', ['scss', 'js', 'fonts'], function() {
+/**
+ *
+ * Libs
+ **/
+gulp.task('lib', function() {
+    gulp.src('_assets/lib/**')
+        .pipe(gulp.dest('lib'));
+});
+
+gulp.task('watch', ['scss', 'js', 'fonts', 'lib'], function() {
     gulp.watch( '_assets/scss/**/*.scss' , ['scss']);
     gulp.watch( '_assets/js/**/*.js' , ['js']);
     gulp.watch( '*.html').on('change', browserSync.reload);

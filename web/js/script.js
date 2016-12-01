@@ -12,6 +12,8 @@ inView('.fadeable-later').on('enter', function(el) {
 inView('.fadeable-right').on('enter', function(el) {
     el.classList.add('in-view');
 });
+
+jQuery( '.swipebox' ).swipebox();
 },{"in-view":2}],2:[function(require,module,exports){
 /*!
  * in-view 0.6.1 - Get notified when a DOM element enters or exits the viewport.

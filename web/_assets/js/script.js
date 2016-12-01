@@ -11,3 +11,5 @@ inView('.fadeable-later').on('enter', function(el) {
 inView('.fadeable-right').on('enter', function(el) {
     el.classList.add('in-view');
 });
+
+jQuery( '.swipebox' ).swipebox();
