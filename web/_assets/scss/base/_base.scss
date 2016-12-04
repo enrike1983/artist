@@ -95,12 +95,11 @@ body {
 ------------------------- */
 .featurette {
   margin-top:20px;
-  .lead {
-    font-family: "euclid_flex", Helvetica, sans-serif;
-    text-align: left;
-  }
 }
-
+.lead {
+  font-family: "euclid_flex", Helvetica, sans-serif;
+  text-align: left;
+}
 .featurette-divider {
   margin: 80px 0; /* Space out the Bootstrap <hr> more */
 }
@@ -128,6 +127,10 @@ body {
   padding:10%;
 }
 
+.album-list img {
+  width: 100%;
+}
+
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
@@ -142,14 +145,12 @@ body {
     position: relative;
     padding-right: 3rem;
   }
-  .featurette {
-    .lead {
-      padding-top: .7rem;
-      font-size: 1.4rem;
-      line-height: 2;
-      letter-spacing: .3rem;
-      max-width: 93%;
-    }
+  .lead {
+    padding-top: .7rem;
+    font-size: 1.4rem;
+    line-height: 2;
+    letter-spacing: .3rem;
+    max-width: 93%;
   }
 }
 
@@ -172,15 +173,21 @@ body {
     letter-spacing: 8px;
     font-size: 3.5rem;
   }
+  .category-heading {
+    text-align: center;
+  }
   .featurette {
     margin-top:60px;
-    .lead {
-      line-height: 2.9;
-      font-size: 1.3rem;
-      letter-spacing: .6rem;
-      font-weight: 300;
-      text-align: left;
-    }
+  }
+  .lead {
+    line-height: 2.9;
+    font-size: 1.3rem;
+    letter-spacing: .6rem;
+    font-weight: 300;
+    text-align: left;
+  }
+  .category-lead {
+    margin-bottom:10%;
   }
   .cm-row {
     display: flex;
