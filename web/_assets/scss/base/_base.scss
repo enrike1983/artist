@@ -5,7 +5,7 @@
 body {
   padding-bottom: 40px;
   color: #393a3d;
-  background: #FAFAFA;
+  background-image: url('../img/lightpaperfibers.png');
   font-style: normal;
   text-align: center;
   font-family: "Atlas Grotesk Web", Helvetica, sans-serif;
@@ -132,6 +132,28 @@ body {
 }
 
 
+#grid[data-columns]::before {
+  content: '3 .column.size-1of3';
+}
+
+/* These are the classes that are going to be applied: */
+.column { float: left; }
+.size-1of1 { width: 100%; }
+.size-1of1 img {
+  width:100%;
+  padding: 10px;
+}
+.size-1of2 { width: 50%; }
+.size-1of2 img {
+  width:100%;
+  padding: 10px;
+}
+.size-1of3 { width: 33.333%; }
+.size-1of3 img {
+  width:100%;
+  padding: 10px;
+}
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
@@ -153,6 +175,24 @@ body {
     max-width: 93%;
   }
 }
+
+@media screen and (max-width: 480px){
+  #grid[data-columns]::before {
+    content: '1 .column.size-1of1';
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  #grid[data-columns]::before {
+    content: '2 .column.size-1of2';
+  }
+}
+@media screen and (min-width: 769px) {
+  #grid[data-columns]::before {
+    content: '3 .column.size-1of3';
+  }
+}
+
 
 
 /** DESKTOP **/
