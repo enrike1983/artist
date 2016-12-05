@@ -5,7 +5,7 @@
 body {
   padding-bottom: 40px;
   color: #393a3d;
-  background-image: url('../img/frenchstucco.png');
+  background-image: url('../img/bg/stucco/stucco.png');
   font-style: normal;
   text-align: center;
   font-family: "Atlas Grotesk Web", Helvetica, sans-serif;
@@ -125,6 +125,13 @@ body {
 }
 .cm-row-content {
   padding:10%;
+  text-align: left;
+  a {
+    font-family: "euclid_flex", Helvetica, sans-serif;
+    text-decoration: underline;
+    font-weight:bold;
+    color: #393a3d;
+  }
 }
 
 .album-list img {
