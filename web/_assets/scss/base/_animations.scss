@@ -1,0 +1,39 @@
+.fadeable {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity .5s, transform .5s;
+  &.in-view {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fadeable-later {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 2s, transform 2s;
+  &.in-view {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fadeable-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 1.5s, transform 1.5s;
+  &.in-view {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.info-container .info-description {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s, transform 1s;
+  &.in-view {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

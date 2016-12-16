@@ -1,6 +1,5 @@
-/* GLOBAL STYLES
+/* Mobile First Styles
 -------------------------------------------------- */
-/* Padding below the footer and lighter body text */
 
 body {
   padding-bottom: 40px;
@@ -11,39 +10,14 @@ body {
   font-family: "Atlas Grotesk Web", Helvetica, sans-serif;
 }
 
-.fadeable {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity .5s, transform .5s;
-  &.in-view {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.logo {
+  position:fixed;
+  top:10px;
+  left:0;
+  height: 140px;
+  opacity: 0.8;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
 }
-
-.fadeable-later {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 2s, transform 2s;
-  &.in-view {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.fadeable-right {
-  opacity: 0;
-  transform: translateX(40px);
-  transition: opacity 1.5s, transform 1.5s;
-  &.in-view {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-
-/* CUSTOMIZE THE NAVBAR
--------------------------------------------------- */
 
 .inner {
   text-align: center;
@@ -53,7 +27,11 @@ body {
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
-  font-family: "Canela Web", Helvetica, sans-serif;
+  /*font-family: "Canela Web", Helvetica, sans-serif;*/
+  /*font-family: "euclid_flex", Helvetica, sans-serif;*/
+  font-family: "Larsseit-Light", Helvetica, sans-serif;
+  text-transform: uppercase;
+  padding-left:25px;
 }
 
 .masthead-nav > li {
@@ -81,20 +59,12 @@ body {
   border-bottom-color: #393a3d;
 }
 
-@media (min-width: 768px) {
-  .masthead-brand {
-    float: left;
-  }
-  .masthead-nav {
-    float: right;
-  }
-}
-
-
-/* Featurettes
-------------------------- */
 .featurette {
   margin-top:20px;
+  a {
+    display: block;
+    max-width: 100%;
+  }
 }
 .lead {
   font-family: "euclid_flex", Helvetica, sans-serif;
@@ -106,7 +76,9 @@ body {
 /* Thin out the marketing headings */
 .featurette-heading {
   font-family: "euclid_flex", Helvetica, sans-serif;
-  text-align: left;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.5;
 }
 
 .cm-row {
@@ -125,7 +97,7 @@ body {
 }
 .cm-row-content {
   padding:10%;
-  text-align: left;
+  text-align: center;
   a {
     font-family: "euclid_flex", Helvetica, sans-serif;
     text-decoration: underline;
@@ -143,7 +115,6 @@ body {
   content: '3 .column.size-1of3';
 }
 
-/* These are the classes that are going to be applied: */
 .column { float: left; }
 .size-1of1 { width: 100%; }
 .size-1of1 img {
@@ -161,50 +132,77 @@ body {
   padding: 10px;
 }
 
-/* RESPONSIVE CSS
--------------------------------------------------- */
+.info-container {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: rgba(0,0,0,0.5);
+  text-align: center;
+  opacity: 0;
+  transition: all ease .25s;
+}
 
-@media (min-width: 320px) {
-  .featurette-heading {
-    text-transform: uppercase;
-    line-height: 1.8;
-    letter-spacing: .7rem;
-    word-spacing: .2rem;
-    font-size: 2.1rem;
-    position: relative;
-    padding-right: 3rem;
-  }
-  .lead {
-    padding-top: .7rem;
-    font-size: 1.4rem;
-    line-height: 2;
-    letter-spacing: .3rem;
-    max-width: 93%;
+.info-container:hover {
+  opacity: 50;
+}
+
+.info-description {
+  font-family: "euclid_flex", Helvetica, sans-serif;
+  line-height: 2;
+  color: #fff;
+  padding: 5%;
+  hr {
+    width: 5%;
+    height: 5px;
+    border-top: 5px solid #F7F7F7;
   }
 }
+
+/* RESPONSIVE
+-------------------------------------------------- */
+
+/* under 480px
+-------------------------------------------------- */
 
 @media screen and (max-width: 480px){
   #grid[data-columns]::before {
     content: '1 .column.size-1of1';
   }
+  .info-description {
+    line-height: inherit;
+  }
+  .featurette-heading {
+    font-size: 2.1rem;
+    position: relative;
+  }
+  .lead {
+    max-width: 93%;
+  }
 }
+
+/* between 481px and 768px
+-------------------------------------------------- */
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   #grid[data-columns]::before {
     content: '2 .column.size-1of2';
   }
 }
-@media screen and (min-width: 769px) {
-  #grid[data-columns]::before {
-    content: '3 .column.size-1of3';
-  }
-}
-
-
 
 /** DESKTOP **/
 @media (min-width: 768px) {
-  /* Navbar positioning foo */
+  #grid[data-columns]::before {
+    content: '3 .column.size-1of3';
+  }
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+
   .navbar-wrapper {
     margin-top: 20px;
   }
@@ -219,6 +217,7 @@ body {
   .featurette-heading {
     letter-spacing: 8px;
     font-size: 3.5rem;
+    text-align: left;
   }
   .category-heading {
     text-align: center;
@@ -248,5 +247,8 @@ body {
   }
   .second-el {
     order:2;
+  }
+  .cm-row-content {
+    text-align: left;
   }
 }

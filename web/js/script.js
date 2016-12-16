@@ -13,6 +13,12 @@ inView('.fadeable-right').on('enter', function(el) {
     el.classList.add('in-view');
 });
 
+jQuery('.info-container').mouseenter(function() {
+    jQuery(this).find('.info-description').addClass('in-view')
+}).mouseleave(function() {
+    jQuery(this).find('.info-description').removeClass('in-view')
+});
+
 jQuery( '.swipebox' ).swipebox();
 },{"in-view":2}],2:[function(require,module,exports){
 /*!
